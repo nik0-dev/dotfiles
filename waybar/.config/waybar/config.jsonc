@@ -1,0 +1,110 @@
+{
+	///////////////
+	/// GENERAL ///
+	///////////////
+
+	"height": 30,
+	"spacing": 0,
+	"modules-left":   ["custom/arch", "hyprland/workspaces#2"],
+	"modules-center": ["hyprland/workspaces"],
+	"modules-right":  ["pulseaudio", "battery", "network", "clock"],
+	"position": "bottom",
+	
+	/////////////
+	/// CLOCK ///
+	/////////////
+ 
+	"clock": {
+		"interval": 1,
+		"format": "{:%r\n>  %x}",
+		"tooltip": false
+	},
+
+	
+	///////////////
+	/// BATTERY ///
+	///////////////
+
+	"battery": {
+		"interval": 1,
+		"states": { "warning": 30, "critical": 15 },
+		"format": "{capacity}% - {icon}",
+		"format-full": "{capacity}% - {icon}",
+		"format-charging": "{capacity}% - ",
+		"format-plugged": "{capacity}% - ",
+		"format-tooltip": "{time}",
+		"format-icons": ["", "", "", "", ""]
+	},
+
+	///////////////
+	/// NETWORK ///
+	///////////////
+
+	"network": {
+		"format-wifi": "󰖩",
+		"format-linked": "󱛅",
+		"format-ethernet": "󰈀",
+		"format-disconnected": "󰖪",
+		"tooltip": false,
+		"on-click": "kitty --hold sh -c \"eval nmtui\""
+	},
+
+	//////////////////
+	/// PULSEAUDIO ///
+	//////////////////
+
+	"pulseaudio": {
+        "scroll-step": 0.5,
+        "format": "{volume}% - {icon}",
+        "format-bluetooth-muted": "󰝟",
+        "format-muted": "󰝟",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+		"tooltip": false,
+        "on-click": "pavucontrol"
+    },
+	
+	"hyprland/workspaces": {
+		"format": "{windows}{icon}",
+		"format-icons": {
+			"default": "",
+			"empty": ""
+		},
+		"window-rewrite-default": "",
+		"window-rewrite": {
+			"class<firefox> title<.*youtube.*>": "", 
+			"class<firefox>": "", 
+			"class<discord>": "",
+			"class<spotify>": "",
+			"class<kitty>": "",
+			"class<kitty> title<nvim.*>": "",
+			"class<firefox> title<.*bluesky.*>": "",
+			"class<org.pulseaudio.pavucontrol> title": "",
+			"class<firefox> title<.*github.*>": "", 	
+			"class<org.Gnome.Nautilus>": "󰪶",
+			"class<firefox> title<.*itshe.dog.*>": "󰏩" // hehe
+		}
+	},
+	"hyprland/workspaces#2": {
+		"format": "{icon}",
+		"format-icons": {
+			"default": "󰏩"
+		},
+		"persistent-workspaces": {
+			"*": [1,2,3,4,5,6,7,8,9,10]
+		}
+	},
+	"custom/arch": {
+		"format": "󰣇",
+		"tooltip": false,
+		"on-click": "wofi --show drun -I -i --gtk-dark -p \"Search:\""
+	}
+
+}
