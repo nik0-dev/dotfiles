@@ -83,6 +83,7 @@
 			"class<firefox>": "", 
 			"class<discord>": "",
 			"class<spotify>": "",
+			"class<steam>": "",
 			"class<kitty>": "",
 			"class<kitty> title<nvim.*>": "",
 			"class<firefox> title<.*bluesky.*>": "",
