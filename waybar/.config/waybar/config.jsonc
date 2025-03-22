@@ -72,7 +72,7 @@
     },
 	
 	"hyprland/workspaces": {
-		"format": "{windows}{icon}",
+		"format": "{id} - {windows}{icon}",
 		"format-icons": {
 			"default": "",
 			"empty": ""
