@@ -7,9 +7,18 @@
 	"spacing": 0,
 	"modules-left":   ["custom/arch", "hyprland/workspaces#2"],
 	"modules-center": ["hyprland/workspaces"],
-	"modules-right":  ["pulseaudio", "battery", "network", "clock"],
+	"modules-right":  ["tray", "pulseaudio", "battery", "network", "clock"],
 	"position": "bottom",
-	
+
+	////////////
+	/// TRAY ///
+	////////////i
+
+	"tray": {
+		"spacing": 10,
+		"show-passive-items": true
+	},
+
 	/////////////
 	/// CLOCK ///
 	/////////////
@@ -77,13 +86,14 @@
 			"default": "",
 			"empty": ""
 		},
-		"window-rewrite-default": "",
+		"window-rewrite-default": "",
 		"window-rewrite": {
 			"class<firefox> title<.*youtube.*>": "", 
-			"class<firefox>": "", 
+			"class<firefox>": "󰈹", 
 			"class<discord>": "",
 			"class<spotify>": "",
 			"class<steam>": "",
+			"class<steam> title<.*notification*.>": "",
 			"class<kitty>": "",
 			"class<kitty> title<nvim.*>": "",
 			"class<firefox> title<.*bluesky.*>": "",
