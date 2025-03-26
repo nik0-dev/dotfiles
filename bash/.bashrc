@@ -7,6 +7,8 @@ alias la='ls -a'
 alias grep='grep --color=auto'
 alias tree='tree -C'
 alias wofi='wofi --show drun -I -i --gtk-dark -p "Search:"'
+alias todo='$EDITOR ~/todolist.txt'
+alias restart_waybar='killall waybar ; waybar & disown'
 
 # prompt
 PS1='\$ {\e[1;32m\W\e[0m} ♥ <\e[1;35m\u\e[0m@\e[1;35m\h\e[0m> - '
